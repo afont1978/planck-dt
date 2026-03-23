@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Planck DT</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="hero card">
+      <p class="eyebrow">Planck DT</p>
+      <h1>Planck Digital Twin Platform</h1>
+      <p class="lead">
+        Minimal Vercel-ready prototype with a lightweight simulation API and frontend.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Simulation controls</h2>
+      <div class="grid">
+        <label>
+          <span>Steps</span>
+          <input id="steps" type="number" min="5" max="200" value="40" />
+        </label>
+        <label>
+          <span>Twins</span>
+          <input id="twins" type="number" min="1" max="10" value="3" />
+        </label>
+        <label>
+          <span>Policy</span>
+          <select id="policy">
+            <option value="rule">Rule</option>
+            <option value="bandit">Bandit</option>
+          </select>
+        </label>
+      </div>
+      <button id="runBtn">Run simulation</button>
+      <p id="status">Ready.</p>
+    </section>
+
+    <section id="summary"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
